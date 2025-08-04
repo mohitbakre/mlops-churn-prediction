@@ -7,6 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import mlflow
 import mlflow.sklearn
+from mlflow.models import infer_signature
 
 
 def train_model():
@@ -14,6 +15,13 @@ def train_model():
     Loads data, trains a RandomForest model, and logs metrics with MLflow.
     """
     print("Starting MLflow experiment...")
+
+    # --- FIX: Explicitly set MLflow tracking URI to a relative path ---
+    # This ensures MLflow stores artifacts in a local 'mlruns' directory
+    # relative to where the script is run, preventing issues with absolute
+    # Windows paths on Linux environments (like CI/CD).
+    mlflow.set_tracking_uri("file:./mlruns")
+
     mlflow.set_experiment("HR_Attrition_Prediction_Experiment")
 
     with mlflow.start_run():
@@ -85,8 +93,17 @@ def train_model():
 
         # --- Model Saving ---
         print("Saving model artifact...")
+        # Infer the model signature from the input and output data
+        signature = infer_signature(X_train, model.predict(X_train))
+
         # Log the trained scikit-learn model as an MLflow artifact
-        mlflow.sklearn.log_model(model, "random_forest_model")
+        # Using 'artifact_path' for the path within the MLflow run's artifact storage
+        mlflow.sklearn.log_model(
+            sk_model=model,
+            artifact_path="random_forest_model",
+            signature=signature,
+            input_example=X_train.head(5) # Provide a small sample of input data
+        )
 
         # Save some example predictions as an artifact for later review
         predictions_df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
