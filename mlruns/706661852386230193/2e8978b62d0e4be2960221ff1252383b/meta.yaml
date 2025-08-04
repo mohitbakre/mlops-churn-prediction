@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/2e8978b62d0e4be2960221ff1252383b/artifacts
+end_time: 1754318353772
+entry_point_name: ''
+experiment_id: '706661852386230193'
+lifecycle_stage: active
+run_id: 2e8978b62d0e4be2960221ff1252383b
+run_name: stately-panda-35
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754318353687
+status: 4
+tags: []
+user_id: dell

@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/86e81a95f21f4a9eb9e64a5dd62387c0/artifacts
+end_time: 1754318844878
+entry_point_name: ''
+experiment_id: '706661852386230193'
+lifecycle_stage: active
+run_id: 86e81a95f21f4a9eb9e64a5dd62387c0
+run_name: rogue-wren-188
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754318840757
+status: 3
+tags: []
+user_id: dell

@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/4a8cdf26b2a946e88b4095b9f9131a12/artifacts
+end_time: 1754319030379
+entry_point_name: ''
+experiment_id: '706661852386230193'
+lifecycle_stage: active
+run_id: 4a8cdf26b2a946e88b4095b9f9131a12
+run_name: calm-grouse-359
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754319026380
+status: 3
+tags: []
+user_id: dell

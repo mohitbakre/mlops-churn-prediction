@@ -1,0 +1,6 @@
+artifact_location: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193
+creation_time: 1754318353371
+experiment_id: '706661852386230193'
+last_update_time: 1754318353371
+lifecycle_stage: active
+name: HR_Attrition_Prediction_Experiment
