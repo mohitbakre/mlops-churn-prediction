@@ -28,6 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Clean MLflow cache and artifacts
+      run: |
+        rm -rf .mlflow mlruns
+
     - name: Clear MLflow env vars (avoid Windows path issues)
       run: |
           unset MLFLOW_TRACKING_URI
