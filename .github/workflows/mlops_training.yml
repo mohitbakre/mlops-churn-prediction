@@ -28,6 +28,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Clear MLflow env vars (avoid Windows path issues)
+      run: |
+          unset MLFLOW_TRACKING_URI
+          unset MLFLOW_ARTIFACT_URI
+
     - name: Run MLflow training script
       run: |
         python src/train.py
