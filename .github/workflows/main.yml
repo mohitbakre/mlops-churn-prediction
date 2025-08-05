@@ -13,6 +13,19 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: Fix DNS for Hugging Face registry
+        run: |
+          IP_ADDR=$(dig +short registry.huggingface.co | head -n 1)
+          if [ -z "$IP_ADDR" ]; then
+            echo "Failed to resolve registry.huggingface.co, trying again..."
+            IP_ADDR=$(dig +short registry.huggingface.co @8.8.8.8 | head -n 1)
+          fi
+          if [ -z "$IP_ADDR" ]; then
+            echo "Failed to resolve registry.huggingface.co even with a public DNS server. Exiting."
+            exit 1
+          fi
+          echo "$IP_ADDR registry.huggingface.co" | sudo tee -a /etc/hosts
+
       - name: Log in to Hugging Face
         uses: docker/login-action@v3
         with:
