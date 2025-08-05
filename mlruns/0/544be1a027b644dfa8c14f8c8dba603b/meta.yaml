@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/0/544be1a027b644dfa8c14f8c8dba603b/artifacts
+end_time: 1754328256834
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 544be1a027b644dfa8c14f8c8dba603b
+run_name: smiling-yak-278
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754328256805
+status: 3
+tags: []
+user_id: dell

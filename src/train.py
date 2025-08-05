@@ -100,7 +100,7 @@ def train_model():
         # Using 'artifact_path' for the path within the MLflow run's artifact storage
         mlflow.sklearn.log_model(
             sk_model=model,
-            name="random_forest_model",
+            artifact_path="random_forest_model",
             signature=signature,
             input_example=X_train.head(5) # Provide a small sample of input data
         )

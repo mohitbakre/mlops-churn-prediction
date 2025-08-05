@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/fc23dad6a2414d7f8cac38c204e17a66/artifacts
+end_time: 1754328883748
+entry_point_name: ''
+experiment_id: '706661852386230193'
+lifecycle_stage: active
+run_id: fc23dad6a2414d7f8cac38c204e17a66
+run_name: useful-auk-283
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754328877522
+status: 3
+tags: []
+user_id: dell

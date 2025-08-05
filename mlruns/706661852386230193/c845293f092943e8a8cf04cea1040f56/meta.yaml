@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/c845293f092943e8a8cf04cea1040f56/artifacts
+end_time: 1754407160915
+entry_point_name: ''
+experiment_id: '706661852386230193'
+lifecycle_stage: active
+run_id: c845293f092943e8a8cf04cea1040f56
+run_name: gifted-moth-48
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754407155659
+status: 3
+tags: []
+user_id: dell

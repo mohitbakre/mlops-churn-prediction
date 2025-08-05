@@ -1,0 +1,69 @@
+artifact_path: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/models/m-e2772d696051444d9779175e8e37a990/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.4
+model_id: m-e2772d696051444d9779175e8e37a990
+model_size_bytes: 1900441
+model_uuid: m-e2772d696051444d9779175e8e37a990
+prompts: null
+run_id: fc23dad6a2414d7f8cac38c204e17a66
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "Age", "required": true}, {"type": "long", "name":
+    "DailyRate", "required": true}, {"type": "long", "name": "DistanceFromHome", "required":
+    true}, {"type": "long", "name": "Education", "required": true}, {"type": "long",
+    "name": "EnvironmentSatisfaction", "required": true}, {"type": "long", "name":
+    "HourlyRate", "required": true}, {"type": "long", "name": "JobInvolvement", "required":
+    true}, {"type": "long", "name": "JobLevel", "required": true}, {"type": "long",
+    "name": "JobSatisfaction", "required": true}, {"type": "long", "name": "MonthlyIncome",
+    "required": true}, {"type": "long", "name": "MonthlyRate", "required": true},
+    {"type": "long", "name": "NumCompaniesWorked", "required": true}, {"type": "long",
+    "name": "PercentSalaryHike", "required": true}, {"type": "long", "name": "PerformanceRating",
+    "required": true}, {"type": "long", "name": "RelationshipSatisfaction", "required":
+    true}, {"type": "long", "name": "StockOptionLevel", "required": true}, {"type":
+    "long", "name": "TotalWorkingYears", "required": true}, {"type": "long", "name":
+    "TrainingTimesLastYear", "required": true}, {"type": "long", "name": "WorkLifeBalance",
+    "required": true}, {"type": "long", "name": "YearsAtCompany", "required": true},
+    {"type": "long", "name": "YearsInCurrentRole", "required": true}, {"type": "long",
+    "name": "YearsSinceLastPromotion", "required": true}, {"type": "long", "name":
+    "YearsWithCurrManager", "required": true}, {"type": "boolean", "name": "BusinessTravel_Travel_Frequently",
+    "required": true}, {"type": "boolean", "name": "BusinessTravel_Travel_Rarely",
+    "required": true}, {"type": "boolean", "name": "Department_Research & Development",
+    "required": true}, {"type": "boolean", "name": "Department_Sales", "required":
+    true}, {"type": "boolean", "name": "EducationField_Life Sciences", "required":
+    true}, {"type": "boolean", "name": "EducationField_Marketing", "required": true},
+    {"type": "boolean", "name": "EducationField_Medical", "required": true}, {"type":
+    "boolean", "name": "EducationField_Other", "required": true}, {"type": "boolean",
+    "name": "EducationField_Technical Degree", "required": true}, {"type": "boolean",
+    "name": "Gender_Male", "required": true}, {"type": "boolean", "name": "JobRole_Human
+    Resources", "required": true}, {"type": "boolean", "name": "JobRole_Laboratory
+    Technician", "required": true}, {"type": "boolean", "name": "JobRole_Manager",
+    "required": true}, {"type": "boolean", "name": "JobRole_Manufacturing Director",
+    "required": true}, {"type": "boolean", "name": "JobRole_Research Director", "required":
+    true}, {"type": "boolean", "name": "JobRole_Research Scientist", "required": true},
+    {"type": "boolean", "name": "JobRole_Sales Executive", "required": true}, {"type":
+    "boolean", "name": "JobRole_Sales Representative", "required": true}, {"type":
+    "boolean", "name": "MaritalStatus_Married", "required": true}, {"type": "boolean",
+    "name": "MaritalStatus_Single", "required": true}, {"type": "boolean", "name":
+    "OverTime_Yes", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-08-04 17:34:37.960397'

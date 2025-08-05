@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/47feb0410734454686cdc89eeabb8e36/artifacts
+end_time: 1754329347997
+entry_point_name: ''
+experiment_id: '706661852386230193'
+lifecycle_stage: active
+run_id: 47feb0410734454686cdc89eeabb8e36
+run_name: aged-fish-857
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754329340498
+status: 3
+tags: []
+user_id: dell

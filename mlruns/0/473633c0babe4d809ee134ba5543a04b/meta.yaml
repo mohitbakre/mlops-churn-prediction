@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/0/473633c0babe4d809ee134ba5543a04b/artifacts
+end_time: 1754328257968
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 473633c0babe4d809ee134ba5543a04b
+run_name: thoughtful-lynx-640
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754328257900
+status: 3
+tags: []
+user_id: dell

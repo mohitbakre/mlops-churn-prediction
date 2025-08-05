@@ -1,0 +1,10 @@
+artifact_location: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/models/m-8216dc5849dc45b8b3c81d49f261a85d/artifacts
+creation_timestamp: 1754329340886
+experiment_id: '706661852386230193'
+last_updated_timestamp: 1754329347975
+model_id: m-8216dc5849dc45b8b3c81d49f261a85d
+model_type: null
+name: random_forest_model
+source_run_id: 47feb0410734454686cdc89eeabb8e36
+status: 2
+status_message: null

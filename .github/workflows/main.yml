@@ -1,0 +1,32 @@
+name: Deploy to Hugging Face Space
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Log in to Hugging Face
+        uses: docker/login-action@v2
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.HF_TOKEN }}
+
+      - name: Build and push Docker image
+        env:
+          IMAGE_NAME: churn-prediction-api
+          HF_SPACE_NAME: mohitbakre/churn-prediction-api
+        run: |
+          # Build the Docker image
+          docker build -t $IMAGE_NAME .
+          # Tag the image for Hugging Face
+          docker tag $IMAGE_NAME:latest registry.hf.co/$HF_SPACE_NAME:latest
+          # Push the image to the Hugging Face Docker registry
+          docker push registry.hf.co/$HF_SPACE_NAME:latest

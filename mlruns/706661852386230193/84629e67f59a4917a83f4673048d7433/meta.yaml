@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/devops_pipeline/mlops2/mlruns/706661852386230193/84629e67f59a4917a83f4673048d7433/artifacts
+end_time: 1754407114622
+entry_point_name: ''
+experiment_id: '706661852386230193'
+lifecycle_stage: active
+run_id: 84629e67f59a4917a83f4673048d7433
+run_name: youthful-koi-102
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754407114244
+status: 4
+tags: []
+user_id: dell
