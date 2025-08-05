@@ -10,13 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Push to Hugging Face Hub
-        uses: huggingface/actions/docker-push@v3.4.0
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          # Your Hugging Face Space repository name
-          space: your-huggingface-username/churn-prediction-api
-          # Your Hugging Face token secret
-          token: ${{ secrets.HF_TOKEN }}
+          lfs: true
+
+      - name: Sync to Hugging Face Hub
+        uses: nateraw/huggingface-sync-action@v0.0.4
+        with:
+          huggingface_repo_id: mohitbakre/churn-prediction-api
+          repo_type: space
+          space_sdk: docker
+          hf_token: ${{ secrets.HF_TOKEN }}
