@@ -16,17 +16,23 @@ jobs:
       - name: Log in to Hugging Face
         uses: docker/login-action@v2
         with:
+          # Use the Hugging Face registry URL
+          registry: registry.hf.co
+          # Use your Hugging Face username for authentication
           username: ${{ github.actor }}
+          # Use the Hugging Face token secret
           password: ${{ secrets.HF_TOKEN }}
 
       - name: Build and push Docker image
         env:
+          # Your Docker image name (can be anything)
           IMAGE_NAME: churn-prediction-api
+          # The name of your Hugging Face Space
           HF_SPACE_NAME: mohitbakre/churn-prediction-api
         run: |
           # Build the Docker image
           docker build -t $IMAGE_NAME .
-          # Tag the image for Hugging Face
+          # Tag the image with the Hugging Face registry URL
           docker tag $IMAGE_NAME:latest registry.hf.co/$HF_SPACE_NAME:latest
-          # Push the image to the Hugging Face Docker registry
+          # Push the image to the Hugging Face registry
           docker push registry.hf.co/$HF_SPACE_NAME:latest
