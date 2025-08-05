@@ -16,8 +16,8 @@ jobs:
       - name: Log in to Hugging Face
         uses: docker/login-action@v2
         with:
-          # Use the Hugging Face registry URL
-          registry: registry.hf.co
+          # Use the correct Hugging Face registry URL
+          registry: registry.huggingface.co
           # Use your Hugging Face username for authentication
           username: ${{ github.actor }}
           # Use the Hugging Face token secret
@@ -33,6 +33,6 @@ jobs:
           # Build the Docker image
           docker build -t $IMAGE_NAME .
           # Tag the image with the Hugging Face registry URL
-          docker tag $IMAGE_NAME:latest registry.hf.co/$HF_SPACE_NAME:latest
+          docker tag $IMAGE_NAME:latest registry.huggingface.co/$HF_SPACE_NAME:latest
           # Push the image to the Hugging Face registry
-          docker push registry.hf.co/$HF_SPACE_NAME:latest
+          docker push registry.huggingface.co/$HF_SPACE_NAME:latest
